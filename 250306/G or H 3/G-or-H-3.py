@@ -11,7 +11,7 @@ for i in range(n):
 answer = 0 
 
 # 모든 위치 i, i + k에 대해서 
-for i in range(1, 1000-k+1):
+for i in range(1, 10000-k+1):
     score = 0
     start = i
     end = i + k
