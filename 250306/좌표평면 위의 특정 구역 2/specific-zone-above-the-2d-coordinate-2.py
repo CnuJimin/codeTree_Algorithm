@@ -1,3 +1,5 @@
+import sys 
+
 N = int(input())
 
 x = []
@@ -8,7 +10,7 @@ for _ in range(N):
     x.append(a)
     y.append(b)
 
-answer = 0 
+answer = sys.maxsize
 #모든 N에 대해 i번째 좌표를 제외했을 때 -> N
 for i in range(N):
     #가장 큰 x,y와 가장 작은 x,y를 구한다 -> 4N => o(n^2) 
@@ -22,4 +24,4 @@ for i in range(N):
 
     answer = min(answer, area)
 
-print(area)
+print(answer)
