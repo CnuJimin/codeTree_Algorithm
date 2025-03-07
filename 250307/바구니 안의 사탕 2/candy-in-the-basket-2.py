@@ -30,7 +30,7 @@ for i in range(n):
 #     answer = max(answer, sum(arr[st : end + 1]))
     
 for i in range(k, 100 - k + 1):
-    answer = max(answer, sum(arr[i - k : i + k -1]))
+    answer = max(answer, sum(arr[i - k : i + k +1]))
 
 
 print(answer)
