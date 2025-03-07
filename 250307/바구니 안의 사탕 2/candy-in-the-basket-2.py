@@ -15,7 +15,7 @@ candy = [tuple(map(int, input().split())) for i in range(n)] #[사탕의 개수,
 
 # print(answer)
 
-arr = [0] * 100
+arr = [0] * 101
 answer = -1 
 
 for i in range(n):
