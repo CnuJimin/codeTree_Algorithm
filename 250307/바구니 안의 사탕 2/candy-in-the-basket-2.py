@@ -15,7 +15,7 @@ candy = [tuple(map(int, input().split())) for i in range(n)] #[사탕의 개수,
 
 # print(answer)
 
-arr = [0] * 101
+arr = [0] * 100
 answer = -1 
 
 for i in range(n):
@@ -25,3 +25,18 @@ for i in range(k, 101):
     answer = max(answer, sum(arr[i - k : i + k + 1]))
 
 print(answer)
+
+# import sys
+
+# N, K = map(int, input().split())
+# basket = [0 for _ in range(101)]
+
+# for _ in range(N):
+#     c, p = map(int, input().split())
+#     basket[p] += c
+
+# max_val = -sys.maxsize
+# for i in range(101):
+#     max_val = max(max_val, sum(basket[i-K:i+K+1]))
+
+# print(max_val)
