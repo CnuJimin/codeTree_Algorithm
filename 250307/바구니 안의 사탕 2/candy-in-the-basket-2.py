@@ -21,7 +21,7 @@ answer = -1
 for i in range(n):
     arr[candy[i][1]] += candy[i][0]
 
-for i in range(k, 101 - k + 1):
+for i in range(k, 100 - k + 1):
     answer = max(answer, sum(arr[i - k : i + k + 1]))
 
 print(answer)
