@@ -19,7 +19,7 @@ arr = [0] * 100
 answer = -1 
 
 for i in range(n):
-    arr[candy[i][1]] = candy[i][0]
+    arr[candy[i][1]] += candy[i][0]
 
 for i in range(k, 101):
     answer = max(answer, sum(arr[i - k : i + k + 1]))
