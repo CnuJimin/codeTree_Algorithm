@@ -1,6 +1,7 @@
 n, k = map(int, input().split())
 candy = [tuple(map(int, input().split())) for i in range(n)] #[사탕의 개수, 바구니 위치]
 
+# --그냥 완전 탐색 -- 
 # answer = 0
 # # 모든 경우에 대해 / 모든 c위치에 대해서 
 # for c in range(101):
@@ -15,30 +16,22 @@ candy = [tuple(map(int, input().split())) for i in range(n)] #[사탕의 개수,
 
 # print(answer)
 
+
+# -- 카운팅 어레이 -- 
 arr = [0] * 101
 answer = -1 
 
 for i in range(n):
     arr[candy[i][1]] += candy[i][0]
 
-for i in range(101):
-    st = i - k if i - k >= 0 else 0
-    end = i + k if i + k <= 100 else 100
-    answer = max(answer, sum(arr[st : end + 1]))
+# for i in range(101):
+#     st = i - k if i - k >= 0 else 0
+#     end = i + k if i + k <= 100 else 100
+#     answer = max(answer, sum(arr[st : end + 1]))
+    
+for i in range(k, 100 - k + 1):
+    answer = max(answer, sum(arr[i - k : i + k -1]))
+
 
 print(answer)
 
-# import sys
-
-# N, K = map(int, input().split())
-# basket = [0 for _ in range(101)]
-
-# for _ in range(N):
-#     c, p = map(int, input().split())
-#     basket[p] += c
-
-# max_val = -sys.maxsize
-# for i in range(101):
-#     max_val = max(max_val, sum(basket[i-K:i+K+1]))
-
-# print(max_val)
