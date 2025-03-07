@@ -41,7 +41,7 @@ for i in range(1, 10):
                 # 만약 해당 수가 cnt_1, cnt_2 둘중 하나라도 c1,c2와 다르다면 만족하지 못하는 수임 
                 if c1!= cnt_1 or c2 != cnt_2:
                     succeeded = False
-                    break
+                    # break
             
             if succeeded:
                 cnt += 1
