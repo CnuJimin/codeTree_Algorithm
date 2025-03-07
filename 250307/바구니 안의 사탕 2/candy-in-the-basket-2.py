@@ -15,14 +15,16 @@ candy = [tuple(map(int, input().split())) for i in range(n)] #[사탕의 개수,
 
 # print(answer)
 
-arr = [0] * 101
+arr = [0] * 100
 answer = -1 
 
 for i in range(n):
     arr[candy[i][1]] += candy[i][0]
 
-for i in range(k, 100 - k + 1):
-    answer = max(answer, sum(arr[i - k : i + k + 1]))
+for i in range(101):
+    st = i - k if i - k >= 0 else 0
+    end = i + k if i + k <= 100 else 100
+    answer = max(answer, sum(arr[st : end + 1]))
 
 print(answer)
 
