@@ -8,9 +8,9 @@ ques = [tuple(map(int, input().split())) for i in range(N)]
 
 cnt = 0
 
-for i in range(1, 11):
-    for j in range(1, 11):
-        for k in range(1, 11):
+for i in range(1, 10):
+    for j in range(1, 10):
+        for k in range(1, 10):
             if i == j or i == k or j == k :
                 continue
 
