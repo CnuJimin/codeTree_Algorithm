@@ -21,5 +21,8 @@ for i in range(m):
         print(answer)
         break
 
-
+if not find:
+    answer = -1 
+    print(answer)
     
+#9 3918 8072
