@@ -29,15 +29,21 @@ def move (num, arr):
                 arr[cur] = pos
 
 
-    return arr 
+    return arr, cur
+a_time = 0
+b_time = 0 
 
-A_arr = move(n, A_arr)
-B_arr = move(m, B_arr)
+A_arr, a_time = move(n, A_arr)
+B_arr, b_time = move(m, B_arr)
 
-for i in range(1, 1000001):
+total_time = max(a_time, b_time)
+
+answer = - 1
+
+for i in range(1, total_time + 1):
     if A_arr[i] == B_arr[i]:
-        print(i)
+        answer = i
         break
 
 
-
+print(answer)
