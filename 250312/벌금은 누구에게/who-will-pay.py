@@ -11,18 +11,24 @@ for i in range(m):
 
     students[who - 1] += 1
 
-    for j in range(n):
-        if students[j] >= k :
-            find = True
-            answer = j + 1
-            break
-
-    if find:
-        print(answer)
+    if students[who -1 ] >= k :
+        answer = who
         break
+print(answer)
 
-if not find:
-    answer = -1 
-    print(answer)
+#     for j in range(n):
+#         if students[j] >= k :
+#             find = True
+#             answer = j + 1
+#             break
+
+#     if find:
+#         print(answer)
+#         break
+
+# if not find:
+#     answer = -1 
+#     print(answer)
+
     
 #9 3918 8072
