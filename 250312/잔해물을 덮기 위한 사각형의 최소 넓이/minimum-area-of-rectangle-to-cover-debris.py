@@ -1,3 +1,5 @@
+import sys
+
 # offset을 고려해서 배열의 크기를 [2050][2050]으로 설정함 
 arr = [[0 for i in range(2051)] for i in range(2051)]
 
@@ -20,7 +22,7 @@ for i in range(x1, x2):
         arr[i][j] = 0 
 
 
-max_x, min_x, max_y, min_y = 0, 3000, 0, 3000
+max_x, min_x, max_y, min_y = -sys.maxsize, sys.maxsize, -sys.maxsize, sys.maxsize
 
 exist_sqaure = True
 
