@@ -24,7 +24,7 @@ for i in range(x1, x2):
 
 max_x, min_x, max_y, min_y = -sys.maxsize, sys.maxsize, -sys.maxsize, sys.maxsize
 
-exist_sqaure = True
+exist_sqaure = False
 
 for i in range(2051):
     for j in range(2051):
