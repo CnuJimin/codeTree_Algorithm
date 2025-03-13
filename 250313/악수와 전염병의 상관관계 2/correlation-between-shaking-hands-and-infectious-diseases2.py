@@ -2,10 +2,10 @@ n, k, p, t = map(int, input().split())
 
 #N명의 개발자가 있고, 최초 전염병에 걸린 개발자는 p개발자이고,k번 악수의 악수까지만 전염병이 걸림, t번에 걸쳐 악수를 진행 
 
-developer = [0] + [0] * (n)  # 0번 인덱스는 마지막에 재껴줘야 함 
+developer = [0] * (n)  # 0번 인덱스는 마지막에 재껴줘야 함 
 
 #p번 개발자 최초 감염자 
-developer[p] = 1
+developer[p-1] = 1
 
 handshake = []
 
@@ -20,11 +20,11 @@ handshake.sort(key = lambda x : x[0])
 
 cnt = 0
 for t, x, y in handshake:
-    if cnt > k :
+    if cnt >= k :
         break
 
-    if developer[x] == 1 or developer[y] == 1:
-        developer[x], developer[y] = 1, 1
+    if developer[x-1] == 1 or developer[y-1] == 1:
+        developer[x-1], developer[y-1] = 1, 1
     cnt += 1
 
 
