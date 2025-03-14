@@ -9,7 +9,7 @@ visited = [[0 for _ in range(m)] for _ in range(n)]
 order = 1
 
 def in_range(x,y):
-    return 0<=x<n and 0<=y<n
+    return 0<=x<n and 0<=y<m
 
 def can_go(x,y):
     return in_range(x,y) and graph[x][y] != 0 and visited[x][y] == 0 
@@ -40,14 +40,14 @@ dfs(0,0)
 
 
 # for i in range(n):
-#     for j in range(n):
+#     for j in range(m):
 #         print(graph[i][j], end = " ")
 #     print()
 
 # print("**********")
 
 # for i in range(n):
-#     for j in range(n):
+#     for j in range(m):
 #         print(visited[i][j], end = " ")
 #     print()
 
