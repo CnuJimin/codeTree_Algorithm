@@ -20,6 +20,8 @@ arr = list(input())
 
 n = len(arr)
 
+flag = True 
+
 ans = ""
 
 for i in range(n):
@@ -28,17 +30,24 @@ for i in range(n):
 
     else:
         if s.empty():
+            flag = False
             ans = "No"
+            break
+            
         else:
             s.pop()
 
     # print(*s.items)
     
 
-if not s.empty():
+if not flag:
     ans = "No"
+
 else:
-    ans = "Yes"
+    if not s.empty():
+        ans = "No"
+    else:  
+        ans = "Yes"
 
 print(ans)
         
