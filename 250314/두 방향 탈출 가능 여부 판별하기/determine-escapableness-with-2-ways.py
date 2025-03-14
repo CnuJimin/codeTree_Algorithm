@@ -1,10 +1,10 @@
 n, m = map(int, input().split())
 
 #배열 만들어주기 
-graph = [list(map(int, input().split())) for _ in range(m)]
+graph = [list(map(int, input().split())) for _ in range(n)]
 
 #방문 여부 배열 만들어주기 
-visited = [[0 for _ in range(n)] for _ in range(m)]
+visited = [[0 for _ in range(m)] for _ in range(n)]
 
 order = 1
 
