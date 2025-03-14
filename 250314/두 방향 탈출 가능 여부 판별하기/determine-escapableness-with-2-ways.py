@@ -52,7 +52,7 @@ dfs(0,0)
 #     print()
 
 
-if graph[n-1][n-1] == 1 :
+if graph[n-1][m-1] == 1 :
     print("0")
 else:
     print("1")
