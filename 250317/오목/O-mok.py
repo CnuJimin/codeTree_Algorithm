@@ -8,31 +8,31 @@ mid_x, mid_y = 0, 0
 for x in range(2, 17):
     for y in range(2, 17):
         #새로로 이겼을 때 
-        if arr[x-2][y] + arr[x-1][y] + arr[x][y] + arr[x+1][y] + arr[x+2][y] == 5:
+        if arr[x-2][y] == arr[x-1][y] == arr[x][y] == arr[x+1][y] == arr[x+2][y] == 1:
             winner = 1
             mid_x, mid_y = x, y 
 
-        elif arr[x-2][y] + arr[x-1][y] + arr[x][y] + arr[x+1][y] + arr[x+2][y] == 10:
+        elif arr[x-2][y] == arr[x-1][y] == arr[x][y] == arr[x+1][y] == arr[x+2][y] == 2:
             winner = 2 
             mid_x, mid_y = x, y 
 
         
         #가로로 이겼을 때 
-        if arr[x][y-2] + arr[x][y-1] + arr[x][y] + arr[x][y+1] + arr[x][y+2] == 5:
+        if arr[x][y-2] == arr[x][y-1] == arr[x][y] == arr[x][y+1] == arr[x][y+2] == 1:
             winner = 1
             mid_x, mid_y = x, y 
 
-        elif arr[x][y-2] + arr[x][y-1] + arr[x][y] + arr[x][y+1] + arr[x][y+2] == 10:
+        elif arr[x][y-2] == arr[x][y-1] == arr[x][y] == arr[x][y+1] == arr[x][y+2] == 2:
             winner = 2 
             mid_x, mid_y = x, y 
 
 
         #대각선으로 이겼을 때 
-        if arr[x-2][y-2] + arr[x-1][y-1] + arr[x][y] + arr[x+1][y+1] + arr[x+2][y+2] == 5:
+        if arr[x-2][y-2] == arr[x-1][y-1] == arr[x][y] == arr[x+1][y+1] == arr[x+2][y+2] == 1:
             winner = 1
             mid_x, mid_y = x, y 
 
-        elif arr[x-2][y-2] + arr[x-1][y-1] + arr[x][y] + arr[x+1][y+1] + arr[x+2][y+2] == 10:
+        elif arr[x-2][y-2] == arr[x-1][y-1] == arr[x][y] == arr[x+1][y+1] == arr[x+2][y+2] == 2:
             winner = 2 
             mid_x, mid_y = x, y 
 
