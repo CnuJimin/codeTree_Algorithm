@@ -5,45 +5,94 @@ arr = [list(map(int, input().split())) for _ in range(19)]
 
 winner = 0 
 mid_x, mid_y = 0, 0 
-for x in range(2, 17):
-    for y in range(2, 17):
-        #새로로 이겼을 때 
-        if arr[x-2][y] == arr[x-1][y] == arr[x][y] == arr[x+1][y] == arr[x+2][y] == 1:
-            winner = 1
-            mid_x, mid_y = x, y 
 
-        elif arr[x-2][y] == arr[x-1][y] == arr[x][y] == arr[x+1][y] == arr[x+2][y] == 2:
+
+# 성공한 모양에 따라서 for 문 범위를 다르게 해줘야 함 
+for x in range(15):
+    for y in range(19):
+        if arr[x][y] == arr[x+1][y] == arr[x+2][y] == arr[x+3][y] == arr[x+4][y] == 1:
+            winner = 1
+            mid_x, mid_y = x+2, y 
+
+        elif arr[x][y] == arr[x+1][y] == arr[x+2][y] == arr[x+3][y] == arr[x+4][y] == 2:
             winner = 2 
-            mid_x, mid_y = x, y 
+            mid_x, mid_y = x+2, y 
+
+
+for x in range(19):
+    for y in range(15):
+        if arr[x][y] == arr[x][y+1] == arr[x][y+2] == arr[x][y+3] == arr[x][y+4] == 1:
+            winner = 1
+            mid_x, mid_y = x, y+2
+
+        elif arr[x][y] == arr[x][y+1] == arr[x][y+2] == arr[x][y+3] == arr[x][y+4] == 2:
+            winner = 2 
+            mid_x, mid_y = x, y+2
+
+
+for x in range(15):
+    for y in range(15):
+        if arr[x][y] == arr[x+1][y+1] == arr[x+2][y+2] == arr[x+3][y+3] == arr[x+4][y+4] == 1:
+            winner = 1
+            mid_x, mid_y = x+2, y+2
+
+        elif arr[x][y] == arr[x+1][y+1] == arr[x+2][y+2] == arr[x+3][y+3] == arr[x+4][y+4] == 2:
+            winner = 2 
+            mid_x, mid_y = x+2, y+2 
+
+for x in range(2, 19):
+    for y in range(2, 19):
+        if arr[x][y] == arr[x-1][y-1] == arr[x-2][y-2] == arr[x-3][y-3] == arr[x-4][y-4] == 1:
+            winner = 1
+            mid_x, mid_y = x-2, y-2 
+
+        elif arr[x][y] == arr[x-1][y-1] == arr[x-2][y-2] == arr[x-3][y-3] == arr[x-4][y-4] == 2:
+            winner = 2 
+            mid_x, mid_y = x-2, y-2 
+
+
+
+
+
+# for x in range(2, 17):
+#     for y in range(2, 17):
+#         #새로로 이겼을 때 
+#         if arr[x-2][y] == arr[x-1][y] == arr[x][y] == arr[x+1][y] == arr[x+2][y] == 1:
+#             winner = 1
+#             mid_x, mid_y = x, y 
+
+#         elif arr[x-2][y] == arr[x-1][y] == arr[x][y] == arr[x+1][y] == arr[x+2][y] == 2:
+#             winner = 2 
+#             mid_x, mid_y = x, y 
 
         
-        #가로로 이겼을 때 
-        if arr[x][y-2] == arr[x][y-1] == arr[x][y] == arr[x][y+1] == arr[x][y+2] == 1:
-            winner = 1
-            mid_x, mid_y = x, y 
+#         #가로로 이겼을 때 
+#         if arr[x][y-2] == arr[x][y-1] == arr[x][y] == arr[x][y+1] == arr[x][y+2] == 1:
+#             winner = 1
+#             mid_x, mid_y = x, y 
 
-        elif arr[x][y-2] == arr[x][y-1] == arr[x][y] == arr[x][y+1] == arr[x][y+2] == 2:
-            winner = 2 
-            mid_x, mid_y = x, y 
+#         elif arr[x][y-2] == arr[x][y-1] == arr[x][y] == arr[x][y+1] == arr[x][y+2] == 2:
+#             winner = 2 
+#             mid_x, mid_y = x, y 
 
 
-        #왼쪽 대각선으로 이겼을 때 
-        if arr[x-2][y-2] == arr[x-1][y-1] == arr[x][y] == arr[x+1][y+1] == arr[x+2][y+2] == 1:
-            winner = 1
-            mid_x, mid_y = x, y 
+#         #왼쪽 대각선으로 이겼을 때 
+#         if arr[x-2][y-2] == arr[x-1][y-1] == arr[x][y] == arr[x+1][y+1] == arr[x+2][y+2] == 1:
+#             winner = 1
+#             mid_x, mid_y = x, y 
 
-        elif arr[x-2][y-2] == arr[x-1][y-1] == arr[x][y] == arr[x+1][y+1] == arr[x+2][y+2] == 2:
-            winner = 2 
-            mid_x, mid_y = x, y 
+#         elif arr[x-2][y-2] == arr[x-1][y-1] == arr[x][y] == arr[x+1][y+1] == arr[x+2][y+2] == 2:
+#             winner = 2 
+#             mid_x, mid_y = x, y 
 
-        #오른쪽 대각선으로 이겼을 때 
-        if arr[x-2][y+2] == arr[x-1][y+1] == arr[x][y] == arr[x+1][y-1] == arr[x+2][y-2] == 1:
-            winner = 1
-            mid_x, mid_y = x, y 
+#         #오른쪽 대각선으로 이겼을 때 
+#         if arr[x-2][y+2] == arr[x-1][y+1] == arr[x][y] == arr[x+1][y-1] == arr[x+2][y-2] == 1:
+#             winner = 1
+#             mid_x, mid_y = x, y 
 
-        elif arr[x-2][y+2] == arr[x-1][y+1] == arr[x][y] == arr[x+1][y-1] == arr[x+2][y-2] == 2:
-            winner = 2 
-            mid_x, mid_y = x, y 
+#         elif arr[x-2][y+2] == arr[x-1][y+1] == arr[x][y] == arr[x+1][y-1] == arr[x+2][y-2] == 2:
+#             winner = 2 
+#             mid_x, mid_y = x, y 
 
 
 
