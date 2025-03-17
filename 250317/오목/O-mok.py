@@ -27,7 +27,7 @@ for x in range(2, 17):
             mid_x, mid_y = x, y 
 
 
-        #대각선으로 이겼을 때 
+        #왼쪽 대각선으로 이겼을 때 
         if arr[x-2][y-2] == arr[x-1][y-1] == arr[x][y] == arr[x+1][y+1] == arr[x+2][y+2] == 1:
             winner = 1
             mid_x, mid_y = x, y 
@@ -35,6 +35,16 @@ for x in range(2, 17):
         elif arr[x-2][y-2] == arr[x-1][y-1] == arr[x][y] == arr[x+1][y+1] == arr[x+2][y+2] == 2:
             winner = 2 
             mid_x, mid_y = x, y 
+
+        #오른쪽 대각선으로 이겼을 때 
+        if arr[x-2][y+2] == arr[x-1][y+1] == arr[x][y] == arr[x+1][y-1] == arr[x+2][y-2] == 1:
+            winner = 1
+            mid_x, mid_y = x, y 
+
+        elif arr[x-2][y+2] == arr[x-1][y+1] == arr[x][y] == arr[x+1][y-1] == arr[x+2][y-2] == 2:
+            winner = 2 
+            mid_x, mid_y = x, y 
+
 
 
 if winner == 0 : 
