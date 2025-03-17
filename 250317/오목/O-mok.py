@@ -40,15 +40,15 @@ for x in range(15):
             winner = 2 
             mid_x, mid_y = x+2, y+2 
 
-for x in range(2, 19):
-    for y in range(2, 19):
-        if arr[x][y] == arr[x-1][y-1] == arr[x-2][y-2] == arr[x-3][y-3] == arr[x-4][y-4] == 1:
+for x in range(4,19):
+    for y in range(15):
+        if arr[x][y] == arr[x-1][y+1] == arr[x-2][y+2] == arr[x-3][y+3] == arr[x-4][y+4] == 1:
             winner = 1
             mid_x, mid_y = x-2, y-2 
 
-        elif arr[x][y] == arr[x-1][y-1] == arr[x-2][y-2] == arr[x-3][y-3] == arr[x-4][y-4] == 2:
+        elif arr[x][y] == arr[x-1][y+1] == arr[x-2][y+2] == arr[x-3][y+3] == arr[x-4][y+4] == 2:
             winner = 2 
-            mid_x, mid_y = x-2, y-2 
+            mid_x, mid_y = x-2, y+2 
 
 
 
