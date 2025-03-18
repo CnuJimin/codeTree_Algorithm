@@ -1,14 +1,17 @@
+import sys
+
 n,t,h = map(int, input().split())
 
 height = list(map(int, input().split()))
 
-for i in range(n):
-    height[i] = abs(height[i] - h)
+ans = sys.maxsize
 
-height.sort()
+for i in range(n-t): 
+    total = 0 
+    for j in range(t):
+        total += abs(h-height[i + j])
+    
+    ans = min(ans, total)
 
-ans = 0 
-for i in range(t):
-    ans += height[i]
 
 print(ans)
