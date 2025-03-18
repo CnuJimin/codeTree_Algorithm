@@ -101,6 +101,6 @@ for i in range(19):
                     sys.exit()
 
             
-
+print(0)
 
     
