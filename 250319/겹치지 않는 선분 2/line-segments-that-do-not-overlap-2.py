@@ -23,7 +23,7 @@ for i in range(n):
             overlap = True 
             break
         
-    if overlap :
+    if not overlap :
         ans += 1
 
 print(ans)
