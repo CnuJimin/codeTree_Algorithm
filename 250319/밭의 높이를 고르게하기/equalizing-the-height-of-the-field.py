@@ -6,7 +6,7 @@ height = list(map(int, input().split()))
 
 ans = sys.maxsize
 
-for i in range(n-t): 
+for i in range(n-t+1): 
     total = 0 
     for j in range(t):
         total += abs(h-height[i + j])
