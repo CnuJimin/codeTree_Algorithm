@@ -12,7 +12,7 @@ for i in range(6):
             if k == i or k == j:
                 continue 
             for l in range(6):
-                if l == k :
+                if l == k or l == i or l == j:
                     continue
                 team_1 = arr[i] + arr[j]
                 team_2 = arr[k] + arr[l]
