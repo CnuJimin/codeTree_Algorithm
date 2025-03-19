@@ -11,20 +11,21 @@ max_y = lines[0][1]
 
 # print(*lines)
 
-ans = 0 
+ans = 1 
 for i in range(1, n):
     x,y = lines[i]
 
     if y <= max_y:
         ans += 1
+        # print("max_y = ", max_y)
+        # print("x2 = ", y)
+
 
 
     if y > max_y:
         max_y = y 
     
 
-    # print("max_y = ", max_y)
-    # print("x2 = ", y)
 
 
-print(n - ans -1 )
+print(n - ans)
