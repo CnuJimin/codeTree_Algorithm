@@ -6,7 +6,7 @@ eat = [list(map(int, input().split())) for _ in range(d)] # [몇번쨰 사람, �
 
 sick = [list(map(int, input().split())) for _ in range(s)] # [몇번째 사람, 언제아팠는지]
 
-spoil_chz = []
+spoil_chz = [0] * 51 
 
 #t초까지 반복하면서, 치즈를 배열에 기록함, 배열은 51*51으로 만들어서, 각 사람이 몇번쨰 치즈를 먹었는지 기록 
 for t in range(1, 101):
@@ -17,7 +17,7 @@ for t in range(1, 101):
                 if arr[sick[i][0]][j] == 1 :
                     # print(t)
                     # print(*arr[sick[i][0]])
-                    spoil_chz.append(j)
+                    spoil_chz[j] += 1 
 
 
     #누가 치즈를 먹었는지 기록 
@@ -28,13 +28,20 @@ for t in range(1, 101):
 
 #만약 t초에 어떤 사람이 아팠다면, 그 전에 그 사람이 먹었던 치즈는 모두 상했다고 판단, 그리고 마지막에 해당 치즈를 먹은 인원은 전부 약을 먹어야 하는 인원이라고 생각 
 
-spoil_chz = set(spoil_chz)
+# spoil_chz = list(set(spoil_chz))
 # print(spoil_chz)
+chz = []
+for i in range(51):
+    if spoil_chz[i] == s :
+        chz.append(i)
+
 
 ans = 0 
 
+# print(*chz)
+
 for i in range(51):
-    for j in spoil_chz:
+    for j in chz:
         if arr[i][j] == 1 :
             ans +=1 
             break
