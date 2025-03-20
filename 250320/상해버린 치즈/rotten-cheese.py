@@ -31,12 +31,12 @@ for i in range(1, m+1):
         if info_1.m != i :
             continue
         
-        p = info_1.p
+        perosn= info_1.p
 
-        if time[p] == 0 :
-            time[p] = info_1.t
-        elif time[p] > info_1.t:
-            time[p] = info_1.t
+        if time[perosn] == 0 :
+            time[perosn] = info_1.t
+        elif time[perosn] > info_1.t:
+            time[perosn] = info_1.t
         
     
     possible = True 
@@ -56,8 +56,9 @@ for i in range(1, m+1):
         for j in range(1, n+1):
             if time[j] != 0 :
                 pill += 1
+    
         
-        ans = max(ans, pill)
+    ans = max(ans, pill)
 
 
 print(ans)
