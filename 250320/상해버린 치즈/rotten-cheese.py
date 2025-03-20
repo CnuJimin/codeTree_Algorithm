@@ -1,7 +1,7 @@
 n, m, d, s = map(int, input().split())
 
 class Info_1:
-    def __init__(self, p, m, t):
+    def __init__(self, p, x, t):
         self.p = p 
         self.m = m
         self.t = t 
@@ -14,8 +14,8 @@ class Info_2:
 
 inf_1 = []
 for i in range(d):
-    p,m,t = tuple(map(int, input().split()))
-    inf_1.append(Info_1(p,m,t))
+    p,x,t = tuple(map(int, input().split()))
+    inf_1.append(Info_1(p,x,t))
 
 inf_2 = []
 for i in range(s):
@@ -56,8 +56,8 @@ for i in range(1, m+1):
         for j in range(1, n+1):
             if time[j] != 0 :
                 pill += 1
-    
-        
+
+
     ans = max(ans, pill)
 
 
