@@ -4,7 +4,7 @@ budget = b
 
 students = [tuple(map(int, input().split())) for _ in range(n)]
 
-students.sort(key = lambda x : x[1])
+students.sort(key = lambda x : (x[0] + x[1], x[1]))
 
 # print(*students)
 
