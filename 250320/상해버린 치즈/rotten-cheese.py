@@ -3,7 +3,7 @@ n, m, d, s = map(int, input().split())
 class Info_1:
     def __init__(self, p, x, t):
         self.p = p 
-        self.m = m
+        self.x = x
         self.t = t 
 
 
