@@ -53,8 +53,8 @@ for i in range(1, m+1):
     pill = 0 
 
     if possible :
-        for i in range(1, n+1):
-            if time[i] != 0 :
+        for j in range(1, n+1):
+            if time[j] != 0 :
                 pill += 1
         
         ans = max(ans, pill)
