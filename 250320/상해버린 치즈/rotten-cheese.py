@@ -1,9 +1,9 @@
 n, m, d, s = map(int, input().split())
 
 class Info_1:
-    def __init__(self, p, x, t):
+    def __init__(self, p, m, t):
         self.p = p 
-        self.x = x
+        self.m = m
         self.t = t 
 
 
