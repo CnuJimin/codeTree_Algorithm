@@ -21,10 +21,10 @@ for x_line in range(0, 101, 2):
             if x > x_line and y < y_line:
                 d += 1
         
-        print(f"x축 : {x_line}, y축: {y_line} => A: {a}, B: {b}, C: {c}, D: {d}")
+        # print(f"x축 : {x_line}, y축: {y_line} => A: {a}, B: {b}, C: {c}, D: {d}")
         m = max(a,b,c,d)
     
-    ans = min(m, ans)
+        ans = min(m, ans)
 
 print(ans)
 
