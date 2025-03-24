@@ -18,6 +18,7 @@ for i in range(1, n):
     seats[i] = 1 
     # print(*seats)
     result = sys.maxsize
+    dist = sys.maxsize
 
     #1들간의 거리를 구함 
     for j in range(n):
