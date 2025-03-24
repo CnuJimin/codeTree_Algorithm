@@ -17,7 +17,7 @@
 
 # #2개의 수 선택 
 # for i in range(1, 10):
-#     for j in range(1, 10):
+#     for j in range(i + 1 , 10):
 #         if i == j :
 #             continue
 #         #배열을 돌면서 수를 찾음 
@@ -66,7 +66,7 @@ def in_range(x, y):
 
 # 2개의 숫자 선택 
 for i in range(1, 10):
-    for j in range(1, 10):
+    for j in range(i+1, 10):
         if i == j:
             continue
         
@@ -99,4 +99,4 @@ for i in range(1, 10):
                     if a_num + b_num == 3 and a_num > 0 and b_num > 0:
                         ans += 1
 
-print(ans//2)
+print(ans)
