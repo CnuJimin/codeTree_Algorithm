@@ -24,7 +24,7 @@ for i in range(1, n):
         for k in range(j+1, n):
             if seats[j] == 1 and seats[k] == 1 :
                 dist = abs(j-k)
-                print(f"좌석{j}, {k} , 거리 = {dist}")
+                # print(f"좌석{j}, {k} , 거리 = {dist}")
 
                 break
         #거리 갱신 
