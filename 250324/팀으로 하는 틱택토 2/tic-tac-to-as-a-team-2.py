@@ -85,7 +85,8 @@ for i in range(1, 10):
                     cx, cy = x, y
                     a_num, b_num = 0, 0  
 
-                    for _ in range(3):  # 3칸 이동해야 승리 조건 성립
+                    # for _ in range(3):  # 3칸 이동해야 승리 조건 성립
+                    while True:
                         if not in_range(cx, cy):
                             break  # 범위를 벗어나면 종료
                         
