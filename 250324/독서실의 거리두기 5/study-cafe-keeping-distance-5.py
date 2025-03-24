@@ -6,10 +6,13 @@ seats = list(map(int, list(input())))
 #모든 좌석을 고려함, 그런데 그 자리 왼쪽, 오른쪽에 1이 있으면 안됨,
 #해당 자리에 앉았을 때 다른 1과의 거리의 최솟값을 갱신하고, 이 값의 최댓값을 갱신해서 답으로 함 
 
-ans = 0 
+ans = 1
 
-for i in range(1, n):
-    if i == n-1:
+for i in range(n):
+    if i == 0 :
+        if seats[i] == 1 or seats[i + 1] == 1 :
+            continue
+    elif i == n-1:
         if seats[i] == 1 or seats[i-1] == 1 :
             continue 
     elif seats[i - 1] == 1 or seats[i] == 1 or  seats[i + 1] == 1 :
