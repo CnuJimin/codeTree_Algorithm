@@ -67,17 +67,21 @@ def in_range(x, y):
 # 2개의 숫자 선택 
 for i in range(1, 10):
     for j in range(i+1, 10):
-        if i == j:
-            continue
-        
+        flag = False
         # 배열을 돌면서 특정 숫자를 포함한 경우만 탐색
         for x in range(3):
+            if flag : 
+                break
             for y in range(3):
+                if flag:
+                    break
                 if arr[x][y] != i and arr[x][y] != j:
                     continue  # 현재 칸이 i 또는 j가 아니라면 탐색할 필요 없음
                 
                 # 4가지 방향으로 탐색 (중복 세기 방지)
                 for n in range(4):
+                    if flag:
+                        break
                     cx, cy = x, y
                     a_num, b_num = 0, 0  
 
@@ -98,5 +102,8 @@ for i in range(1, 10):
                     # 3개의 칸이 연속으로 i, j로만 구성되어 있고, 둘 다 포함해야 함
                     if a_num + b_num == 3 and a_num > 0 and b_num > 0:
                         ans += 1
+                        flag = True 
+                        # print(i,j)
+                        break
 
 print(ans)
