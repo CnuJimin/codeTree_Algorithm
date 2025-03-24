@@ -8,7 +8,7 @@ sub = []
 
 for i in range(n):
     for k in range(1, n):
-        for j in range(i+k+1, n):
+        for j in range(i+1, n):
             if word[i:i+k+1] == word[j:j+k+1]:
                 # print(*word[i:i+k+1])
                 sub.append(k)
