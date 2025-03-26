@@ -24,11 +24,11 @@ max_value = max(bomb)
 
 result = [] 
 
-for i in range(n):
+for i in range(1000001):
     if bomb[i] == max_value:
         result.append(i)
 
-print(*result)
+# print(*result)
 
 if max_value == 0 :
     print(0)
