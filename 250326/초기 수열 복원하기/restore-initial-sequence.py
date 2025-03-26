@@ -1,6 +1,6 @@
 n = int(input())
 arr = list(map(int, input().split()))
-visited = [0] * 6
+visited = [0] * (n+1)
 result = []
 #1~n까지 수 중에 2개를 골라서 합이 되는 경우를 n-1번 확인 
 
@@ -26,7 +26,7 @@ for i in range(1,n+1):
                     break
         
         if flag:
-            visited = [0] * 6
+            visited = [0] * (n+1)
             break
 
 
