@@ -4,10 +4,12 @@ bombs = [int(input()) for _ in range(n)]
 
 bomb = [0] * 1000001
 
-for i in range(n-k):
+# print(*bombs)
+for i in range(n-k+1):
     for j in range(i+1,i+k+1):
         if bombs[i] == bombs[j] :
-            bomb[i] += 1
+            # print(i,j)
+            bomb[bombs[i]] += 1
             break
 
 max_value = max(bomb)
@@ -18,7 +20,9 @@ for i in range(n):
     if bomb[i] == max_value:
         result.append(i)
 
-if len(result) == 0 :
+# print(*result)
+
+if max_value == 0 :
     print(0)
 else:
     print(max(result))
