@@ -3,6 +3,7 @@ import sys
 #정렬을 하고, 차례대로 맨 앞과 맨 뒤 를 한번씩 올리고 내리는 것을 반복하는건 어떤가??
 
 n = int(input())
+k = 17
 
 arr = [int(input()) for _ in range(n)]
 
