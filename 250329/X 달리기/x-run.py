@@ -12,7 +12,7 @@ for i in range(1, x):
     dist = 0 
     time = 0 
     speed = 0
-    # print(f"======변곡점{i}========")
+    print(f"======변곡점{i}========")
     for j in range(1, x):
         
         if j >= i :
@@ -40,6 +40,6 @@ for i in range(1, x):
         
 
 
-        # print(f"time = {j} 속도 = {speed} 거리 = {dist}" )
+        print(f"time = {j} 속도 = {speed} 거리 = {dist}" )
 
 print(ans)
