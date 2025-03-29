@@ -9,6 +9,8 @@ for i in range(p-1, n):
     #누가 보냈는지 확인 
     arr[ord(record[i][0]) - 65] = True 
 
+# print(*arr)
+
 ans = [] 
 
 for i in range(m):
@@ -16,4 +18,7 @@ for i in range(m):
         ans.append(chr(i+65))
 
 
-print(*ans)
+if record[p-1][1] == "0" :
+    print("")
+else:
+    print(*ans)
