@@ -11,11 +11,19 @@ for i in range(p-1, n):
 
 # print(*arr)
 
+
+#반복문 돌면서 자기이전에 자기랑 남아 있는 수가 같았던 사람은 뻄 
+for i in range(n):
+    if record[p-1][1] == record[i][1]:
+        arr[ord(record[i][0]) - 65] = True
+
 ans = [] 
 
 for i in range(m):
     if not arr[i]:
         ans.append(chr(i+65))
+
+        
 
 
 if record[p-1][1] == "0" :
