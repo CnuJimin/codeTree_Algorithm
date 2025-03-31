@@ -1,26 +1,33 @@
-X = int(input())
+import sys
 
-curr_pos = 0
-curr_speed = 1
-sum_time = 0
-while (True):
-    curr_pos += curr_speed
-    sum_time += 1
-    curr_speed += 1
-    increase_sum = 0
+x = int(input())
 
-    if (curr_pos == X):
+dist = 0 
+time = 0 
+speed = 0
+
+while True:
+    time += 1
+    if x - dist > (speed+1) * (speed + 2) // 2:
+        speed += 1
+    elif x - dist < (speed) * (speed + 1) // 2 :
+        speed -= 1
+    
+    dist += speed
+
+    if dist == x :
         break
-    
-    for i in range(curr_speed):
-        increase_sum += i
-    if X - (curr_pos + curr_speed) < increase_sum:
-        curr_speed -= 1
-    
-    stay_sum = 0
-    for i in range(curr_speed):
-        stay_sum += i
-    if X - (curr_pos + curr_speed) < stay_sum:
-        curr_speed -= 1
 
-print(sum_time)
+print(time)
+
+
+
+
+
+#속도를 높일지, 유지할지, 줄일지 결정하는 방법 
+#남은 거리가 현재 속도 +1 부터 1까지 더한 값 보다 크면 상승
+#남은 거리가 현재 속도 부터 1까지 더한 값 보다 크면 그대로 
+# 남은 거리가 현재 속도부터 1까지 더한 값보다 작으면 하락 
+
+# 현재 속도를 유지할 때 도착하는 순간 속력이 1이면서 도착할 수 있는가? 
+# 현재 속도를 계속 더했을 때 
