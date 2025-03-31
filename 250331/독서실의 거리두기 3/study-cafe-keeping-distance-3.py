@@ -21,4 +21,7 @@ for i in dist:
     if i == value:
         ans+= 1
 
-print(ans)
+if value % 2 == 0 :
+    print(ans)
+else:
+    print(ans + 1)
