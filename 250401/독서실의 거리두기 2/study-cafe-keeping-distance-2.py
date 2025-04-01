@@ -35,7 +35,7 @@ if len(dist) == 0 :
 
 elif arr[0] == 0 :
     if first > dist[-1]//2:
-        print(first-1)
+        print(min(first-1, min(dist)))
     else:
         div = dist[-1]//2
         if dist[-1] % 2 == 0 :
@@ -50,7 +50,7 @@ elif arr[0] == 0 :
 
 elif arr[-1] == 0 :
     if n-last > dist[-1]//2:
-        print(n-last-1)
+        print(min(n-last-1, min(dist)))
     else:
         div = dist[-1]//2
         if dist[-1] % 2 == 0 :
