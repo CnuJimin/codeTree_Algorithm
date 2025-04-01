@@ -40,7 +40,7 @@ elif arr[0] == 0 :
         div = dist[-1]//2
         if dist[-1] % 2 == 0 :
             dist[-1] = div
-            dist.append(div//2)
+            dist.append(div)
             print(min(dist))
         else:
             dist[-1] = div + 1
