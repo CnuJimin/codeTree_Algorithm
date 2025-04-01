@@ -31,7 +31,7 @@ for i in range(n-1, 0, -1):
 dist.sort()
 
 if len(dist) == 0 :
-    print(0)
+    print(1)
 
 elif arr[0] == 0 :
     if first > dist[-1]//2:
