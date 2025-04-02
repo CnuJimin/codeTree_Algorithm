@@ -35,7 +35,7 @@ for i in range(n-1, 0, -1):
 #근데 맨 왼쪽 혹은 오른쪽에 0이 존재하면 최대거리(만약 홀수이면 //2, 짝수이면 //2 + 1)와 좌우에 1을 뒀을때 크기를 비교해서 
 if arr[0] == 0 or arr[-1] == 0 :
     if first-1 >= n - last - 1 :
-        if first - 1 > dist // 2 if dist % 2 == 0 else dist // 2 + 1:
+        if first - 1 > dist // 2:
             arr[0] = 1 
         else:
             arr[(x+y) // 2 ] = 1
