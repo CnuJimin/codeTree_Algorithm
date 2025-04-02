@@ -41,8 +41,8 @@ if arr[0] == 0 or arr[-1] == 0 :
             arr[(x+y) // 2 ] = 1
 
     else:
-        print("dist = ", dist)
-        print("last= ", last)
+        # print("dist = ", dist)
+        # print("last= ", last)
         if n - last - 1 > dist // 2 :
             arr[-1] = 1
         else:
@@ -52,8 +52,8 @@ if arr[0] == 0 or arr[-1] == 0 :
 else:
     arr[(x+y) // 2 ] = 1
 
-print(x,y)
-print(*arr)
+# print(x,y)
+# print(*arr)
 
 ans = sys.maxsize
 for i in range(n):
