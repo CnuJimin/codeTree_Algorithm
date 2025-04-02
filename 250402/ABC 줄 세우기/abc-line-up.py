@@ -10,13 +10,18 @@ for i in range(n):
     char = arr[i]
     arr[i] = ord(char) - 65 
 
-cnt = 0 
+#앞에서부터 자기 자리 찾아서 이동 
 
-for i in range(n):
-    if i != arr[i]:
-        cnt += 1
+cnt = 0
 
-if cnt == 0 :
-    print(0)
-else:
-    print(cnt - 1)
+for i in range(n-1):
+    for j in range(n-i-1):
+        if arr[j] > arr[j+1]:
+            temp = arr[j]
+            arr[j] = arr[j+1]
+            arr[j+1] = temp
+            cnt += 1 
+
+
+     
+print(cnt)
