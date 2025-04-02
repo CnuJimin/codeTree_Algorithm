@@ -41,8 +41,9 @@ if arr[0] == 0 or arr[-1] == 0 :
             arr[(x+y) // 2 ] = 1
 
     else:
-        print(dist)
-        if n - last - 1 > dist // 2 if dist % 2 == 0 else dist //2 + 1:
+        print("dist = ", dist)
+        print("last= ", last)
+        if n - last - 1 > dist // 2 :
             arr[-1] = 1
         else:
             arr[(x+y) // 2 ] = 1
