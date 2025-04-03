@@ -24,7 +24,7 @@ if minus < 2 :
 # -가 2개 이상 존재하면 맨 뒤에서 세개 곱한거랑, 제일 작은 수 2개 제일 큰수 하나 곱한거 비교 
 elif minus == n :
     if zero == 0 :
-        ans = arr[0] * arr[1] * arr[2]
+        ans = arr[-1] * arr[-2] * arr[-3]
     elif zero >= 1 :
         ans = 0
 
