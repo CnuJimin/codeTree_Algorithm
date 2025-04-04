@@ -1,16 +1,18 @@
-#블럭들 개수 더하고 나누기 n 해서, 최소 블럭 개수를 구함
-#블럭들 중에서 최소 블럭 개수보다 큰 값들에서 최소 블럭 개수를 뺀 값을 다 더함 
+#와이파이를 어디에 둬야할까? 
+#m부터 이동하면서 거기에 와이파이 기계를 두고, 쭉 이동, 
+#만약 맨 왼쪽 인덱스에 1이고 와이파기 통하지 않는 집이 있으면 무조건 두고, 그게 아니라면 한칸 더 이동 
 
-n = int(input())
+n, m = map(int, input().split())
 
-arr = [int(input()) for _ in range(n)]
+arr = list(map(int, input().split()))
+visited = [False] * n 
 
-avr = sum(arr) // n
+
 ans = 0 
-
-
-for i in arr:
-    if i > avr:
-        ans += i - avr
+for i in range(m, n-m):
+    if arr[i-m] == 1 and visited[i-m] == False:
+        ans += 1
+        for j in range(i-m, i+m+1):
+            visited[j] = True
 
 print(ans)
