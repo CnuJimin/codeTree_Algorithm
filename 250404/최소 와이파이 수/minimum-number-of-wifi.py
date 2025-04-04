@@ -5,11 +5,11 @@
 n, m = map(int, input().split())
 
 arr = list(map(int, input().split()))
-visited = [False] * n 
+visited = [False] * 300
 
 
 ans = 0 
-for i in range(m, n-m):
+for i in range(m, n-m+1):
     if arr[i-m] == 1 and visited[i-m] == False:
         ans += 1
         for j in range(i-m, i+m+1):
