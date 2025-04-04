@@ -7,10 +7,18 @@ n, m = map(int, input().split())
 arr = list(map(int, input().split()))
 visited = [False] * 300
 
+cnt = 0
+for i in arr:
+    if i == 1 :
+        cnt += 1
+
 
 ans = 0 
 
-if m == 0 :
+if cnt == 0 :
+    ans = 0 
+
+elif m == 0 :
     for i in arr:
         if i == 1 :
             ans += 1
