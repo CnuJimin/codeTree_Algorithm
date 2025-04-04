@@ -9,10 +9,16 @@ visited = [False] * 300
 
 
 ans = 0 
-for i in range(m, n-m+1):
-    if arr[i-m] == 1 and visited[i-m] == False:
-        ans += 1
-        for j in range(i-m, i+m+1):
-            visited[j] = True
+
+if m == 0 :
+    for i in arr:
+        if i == 1 :
+            ans += 1
+else:
+    for i in range(m, n-m+1):
+        if arr[i-m] == 1 and visited[i-m] == False:
+            ans += 1
+            for j in range(i-m, i+m+1):
+                visited[j] = True
 
 print(ans)
