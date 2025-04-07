@@ -56,6 +56,9 @@ elif len(even) == 0 :
         i += 1
     # ans -= 1
 
+elif len(even) == len(odd):
+    ans = 2 * len(odd)
+
 elif len(even) > len(odd):
     ans = len(odd) * 2 + 1
 
