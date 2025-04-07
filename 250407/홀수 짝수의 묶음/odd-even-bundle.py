@@ -46,7 +46,10 @@ elif len(even) == 0 :
     ans = 0
     i = 0 
     while True:
-        if odd_cnt <= 1:
+        if odd_cnt == 1:
+            ans -= 1
+            break
+        elif odd_cnt == 0 :
             break
         odd_cnt -= cnt[i%2]
         ans += 1
@@ -61,7 +64,10 @@ elif len(even) < len(odd):
     odd_cnt = len(odd) - len(even)
     i = 0 
     while True:
-        if odd_cnt <= 1:
+        if odd_cnt == 1:
+            ans -= 1
+            break
+        elif odd_cnt == 0 :
             break
         odd_cnt -= cnt[i%2]
         ans += 1
