@@ -18,6 +18,8 @@ public class Main {
                 max = Math.max(max, map.get(word));
             }else{
                 map.put(word, 1);
+                max = Math.max(max, map.get(word));
+
             }
             
         }
