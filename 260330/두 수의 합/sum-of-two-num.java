@@ -15,13 +15,20 @@ public class Main {
 
         while(N -- > 0){
             long num = Long.parseLong(st.nextToken());
-            map.put(num, 1);
 
             long findNum = K - num;
 
             if(map.containsKey(findNum)){
-                cnt ++;
+                cnt += map.get(findNum);
             }
+
+
+            if(map.containsKey(num)){
+                map.put(num, map.get(num) + 1);
+            }else{
+                map.put(num, 1);
+            }
+
 
             
         }
