@@ -22,7 +22,7 @@ public class Main {
         Iterator<Entry<String, Integer>> it = map.entrySet().iterator();
 
         while(it.hasNext()){
-            Entey<String, Integer> entry = it.next();
+            Entry<String, Integer> entry = it.next();
 
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
